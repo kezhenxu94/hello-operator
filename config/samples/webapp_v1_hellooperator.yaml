@@ -1,0 +1,6 @@
+apiVersion: webapp.io.github.kezhenxu94/v1
+kind: HelloOperator
+metadata:
+  name: hellooperator-sample
+spec:
+  name: China

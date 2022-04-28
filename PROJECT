@@ -1,0 +1,20 @@
+domain: io.github.kezhenxu94
+layout:
+- go.kubebuilder.io/v3
+projectName: hello-operator
+repo: github.com/kezhenxu94/hello-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: io.github.kezhenxu94
+  group: webapp
+  kind: HelloOperator
+  path: github.com/kezhenxu94/hello-operator/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"

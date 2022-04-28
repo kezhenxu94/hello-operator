@@ -1,0 +1,31 @@
+# permissions for end users to edit hellooperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hellooperator-editor-role
+rules:
+- apiGroups:
+  - webapp.io.github.kezhenxu94
+  resources:
+  - hellooperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.io.github.kezhenxu94
+  resources:
+  - hellooperators/status
+  verbs:
+  - get
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list

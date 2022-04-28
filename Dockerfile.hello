@@ -1,0 +1,5 @@
+FROM alpine
+
+ENV NAME=world
+
+CMD [ "sh", "-c", "while true; do echo ${NAME} ; sleep 2 ; done" ]
